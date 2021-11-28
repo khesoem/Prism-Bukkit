@@ -1,4 +1,5 @@
 package me.botsko.prism.utils;
+import Locale.ENGLISH;
 
 import me.botsko.prism.Prism;
 import me.botsko.prism.api.objects.MaterialState;
@@ -415,7 +416,7 @@ public class ItemUtils {
         short currentDurability = (short) getItemDamage(item);
         short maxDurability = item.getType().getMaxDurability();
         if (currentDurability > 0 && maxDurability > 0 && currentDurability != maxDurability) {
-            double diff = maxDurability - currentDurability;
+            double diff = (double) maxDurability - currentDurability;
             diff = ((diff / maxDurability) * 100);
             if (diff > 0) {
                 return Math.floor(diff) + "%";

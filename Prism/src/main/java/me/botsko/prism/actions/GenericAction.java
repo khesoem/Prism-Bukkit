@@ -133,7 +133,7 @@ public abstract class GenericAction implements Handler {
             return "just now";
         }
 
-        long period = 24 * 60 * 60;
+        long period = 24 * 60 * 60L ;
 
         final long[] diff = {
               diffInSeconds / period,
